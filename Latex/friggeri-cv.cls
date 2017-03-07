@@ -75,12 +75,19 @@
 }
 
 \newcommand{\header}[3]{%
+
   \begin{tikzpicture}[remember picture,overlay]
+
     \node [
         fill=fillheader,
         anchor=north,
         minimum width=\paperwidth, minimum height=5cm
       ] (box) at (current page.north){};
+    \node [
+    	anchor=west,
+    	] (bla) at (box) {
+		\hspace{6cm}    	
+    	\includegraphics[width=3.5cm]{code}};    
     \node [
         anchor=south,
         font=\fontsize{40pt}{72pt}\selectfont\color{header}
